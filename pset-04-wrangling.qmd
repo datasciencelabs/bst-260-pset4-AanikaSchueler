@@ -98,7 +98,7 @@ library(janitor)
 population <- resp_body_json(response) |> 
   do.call(rbind, args = _) |>              # bind list of rows into matrix
   as.data.frame(stringsAsFactors = FALSE) |> 
-  row_to_names(row_number = 1) |>           # first row = column names
+  row_to_names(row_number = 1) |>           # first row as column names
   as_tibble() |> 
   select(-state) |>                      
   rename(state_name = NAME) |>       
