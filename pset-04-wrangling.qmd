@@ -58,7 +58,7 @@ request <- request(url) |> req_url_query(
 
 
 ```{r}
-# send the request to Census API and store result in response
+# send request to Census API and store result in response
 response <- request |> req_perform()
 # check http status
 resp_status(response)
@@ -218,7 +218,6 @@ We see exactly 1,000 rows. We should be seeing over $52 \times 3$ rows per state
 
 ```{r}
 api <- "https://data.cdc.gov/resource/pwn4-m3yp.json"
-# cases_raw <- 
 
 # make request with larger limit
 response <- request(api) |>
